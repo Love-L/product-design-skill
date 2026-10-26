@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-27
+
+### Added
+
+- Visual system: five diagrams (hero, five lenses, workflow, architecture, session) with HTML/CSS sources in `docs/diagrams/` and rendered 2x PNGs in `docs/assets/`.
+- `scripts/render-diagrams.ps1` to regenerate all diagrams with headless Chrome or Edge.
+- `docs/DIAGRAMS.md`: design tokens, canvas sizes, and how to add a diagram.
+- `docs/PUBLISHING.md`: GitHub publishing, repository metadata, release checklist.
+
+### Changed
+
+- `README.md` rebuilt around the diagrams: positioning, lens collaboration, workflow, session walkthrough, architecture, outputs, FAQ, and roadmap.
+- `README.en.md` expanded with the same visual structure and an English walkthrough.
+- `package.json` version bumped to `1.1.0`.
+
 ## [1.0.0] - 2026-10-27
 
 ### Added

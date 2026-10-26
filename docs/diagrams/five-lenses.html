@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .wrap{position:absolute;inset:0;padding:56px 64px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:30px}
+  .head .right{text-align:right;font-size:12px;color:#6E8BB8;letter-spacing:.06em;line-height:1.7}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .lens{position:relative;height:250px;padding:22px 24px 18px;border-radius:18px;overflow:hidden;
+        background:linear-gradient(180deg,color-mix(in srgb,var(--c) 9%,#101C32) 0%,#0D182B 58%);
+        border:1px solid rgba(148,163,184,.14)}
+  .lens:before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:0 3px 3px 0;background:var(--c);opacity:.85}
+  .top{display:flex;align-items:baseline;gap:12px}
+  .no{font-family:"Segoe UI",sans-serif;font-size:34px;font-weight:700;color:var(--c);opacity:.32;line-height:1}
+  .who{font-size:12.5px;color:#8EA2BD;letter-spacing:.03em}
+  .who b{color:#C8D6E8;font-weight:600}
+  .q{font-size:24px;line-height:1.42;font-weight:700;color:#F2F6FC;margin-top:12px;letter-spacing:-.01em}
+  .tools{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+  .tools span{font-size:11.5px;color:#A9BBD4;background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.14);padding:4px 9px;border-radius:6px}
+  .edge{margin-top:13px;padding-top:10px;border-top:1px dashed rgba(148,163,184,.18);font-size:12px;line-height:1.55;color:#7F93AF}
+  .edge b{color:var(--c);font-weight:700;margin-right:6px;font-size:11px;letter-spacing:.06em}
+  .lens.synth{--c:#9DB2D1;background:linear-gradient(180deg,rgba(157,178,209,.10),rgba(13,24,43,.96) 60%);border-color:rgba(157,178,209,.22)}
+  .rules{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .rule{display:flex;gap:10px;font-size:12.5px;color:#A9BBD4;line-height:1.5}
+  .rule i{font-style:normal;font-family:"Segoe UI",sans-serif;font-size:11px;font-weight:700;color:#9DB2D1;border:1px solid rgba(157,178,209,.35);border-radius:5px;width:18px;height:18px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-top:1px}
+  .closing{margin-top:14px;padding-top:10px;border-top:1px dashed rgba(148,163,184,.16);font-size:11.5px;color:#7F93AF;letter-spacing:.03em}
+  .closing b{color:#C8D6E8;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page" style="height:1020px">
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="kicker"><span class="dot"></span>01 · FIVE LENSES</div>
+        <div class="h2">五个镜头，五种判断</div>
+        <p class="sub">每本书只回答一个问题。先选镜头，再谈方法；先看边界，再谈最佳实践。</p>
+      </div>
+      <div class="right">同一产品在不同阶段<br>可能需要换一个镜头</div>
+    </div>
+
+    <div class="grid2">
+      <div class="lens" style="--c:#6EA8FF">
+        <div class="top"><div class="no">01</div><div class="who"><b>俞军</b> ·《产品方法论》</div></div>
+        <div class="q">值不值得做？<br>和谁交易？</div>
+        <div class="tools"><span>用户价值公式</span><span>需求的集合</span><span>交易成本</span></div>
+        <div class="edge"><b>别用时</b>早期数据不足，别把公式算成自欺欺人的精确数字</div>
+      </div>
+
+      <div class="lens" style="--c:#3DE0C8">
+        <div class="top"><div class="no">02</div><div class="who"><b>诺曼</b> ·《设计心理学》</div></div>
+        <div class="q">用户能不能看懂、<br>能不能做成？</div>
+        <div class="tools"><span>概念模型</span><span>意符 · 映射 · 反馈</span><span>七阶段行动</span></div>
+        <div class="edge"><b>别用时</b>只解决「能用」，解决不了「想要」与「值得」</div>
+      </div>
+
+      <div class="lens" style="--c:#F5B65C">
+        <div class="top"><div class="no">03</div><div class="who"><b>原研哉</b> ·《设计中的设计》</div></div>
+        <div class="q">用户能不能<br>重新「感觉到」？</div>
+        <div class="tools"><span>空白</span><span>再设计</span><span>信息雕刻</span><span>感官</span></div>
+        <div class="edge"><b>别用时</b>高风险、高密度、强时效的 B 端操作场景</div>
+      </div>
+
+      <div class="lens" style="--c:#FF7E9D">
+        <div class="top"><div class="no">04</div><div class="who"><b>埃亚尔</b> ·《上瘾》</div></div>
+        <div class="q">行为会不会<br>再次发生？</div>
+        <div class="tools"><span>触发</span><span>行动 B=MAT</span><span>可变奖励</span><span>投入</span></div>
+        <div class="edge"><b>别用时</b>低频、一次性、B 端强制流程、脆弱人群</div>
+      </div>
+
+      <div class="lens" style="--c:#B49CFF">
+        <div class="top"><div class="no">05</div><div class="who"><b>杨堃</b> ·《决胜体验设计》</div></div>
+        <div class="q">在真实组织里，<br>能不能落地、能不能度量？</div>
+        <div class="tools"><span>场景地图</span><span>架构与 IA</span><span>六脉神剑</span><span>体验度量</span></div>
+        <div class="edge"><b>别用时</b>极轻量的 C 端小功能，容易过度工程化</div>
+      </div>
+
+      <div class="lens synth">
+        <div class="top"><div class="no">＋</div><div class="who"><b>协同</b> · 先选模式，再选镜头</div></div>
+        <div class="rules">
+          <div class="rule"><i>1</i><span>低频、高风险、B 端强制流程：跳过 Hook，主用诺曼 + 杨堃。</span></div>
+          <div class="rule"><i>2</i><span>用户已经会用、但觉得「不好」：先查七阶段，不要急着做视觉。</span></div>
+          <div class="rule"><i>3</i><span>方案很完整、却说不清为什么：回到价值三问。</span></div>
+        </div>
+        <div class="closing">镜头不是标签，而是<b>提问方式</b>。先问对问题，再选对方法。</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

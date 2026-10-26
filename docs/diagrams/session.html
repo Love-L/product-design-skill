@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .wrap{position:absolute;inset:0;padding:54px 64px}
+  .head{margin-bottom:26px}
+  .main{display:flex;gap:40px}
+  .timeline{flex:0 0 500px;padding-top:4px}
+  .titem{position:relative;display:flex;gap:16px;padding-bottom:26px}
+  .titem:not(:last-child):before{content:"";position:absolute;left:14px;top:32px;bottom:2px;width:1px;background:linear-gradient(to bottom,rgba(110,168,255,.45),rgba(148,163,184,.14))}
+  .tnode{position:relative;z-index:2;flex:0 0 29px;height:29px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Segoe UI",sans-serif;font-size:12px;font-weight:700;color:#0B1220;background:#6EA8FF}
+  .titem:nth-child(2) .tnode{background:#7FB2FF}
+  .titem:nth-child(3) .tnode{background:#3DE0C8}
+  .titem:nth-child(4) .tnode{background:#F5B65C}
+  .titem:nth-child(5) .tnode{background:#FF7E9D}
+  .tt{font-size:16px;font-weight:700;display:flex;align-items:center;gap:9px}
+  .ttag{font-size:9.5px;font-weight:600;color:#7F93AF;border:1px solid rgba(148,163,184,.18);border-radius:999px;padding:2px 8px;letter-spacing:.04em}
+  .td{font-size:12px;line-height:1.65;color:#8EA2BD;margin-top:6px;max-width:420px}
+  .td b{color:#C8D6E8;font-weight:600}
+  .chat{position:relative;flex:1;height:474px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,rgba(23,36,60,.9),rgba(11,21,38,.95));border:1px solid rgba(148,163,184,.17)}
+  .bar{height:42px;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid rgba(148,163,184,.12);background:rgba(148,163,184,.03)}
+  .bar i{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .bar .t{margin-left:8px;font-size:10.5px;color:#7F93AF;letter-spacing:.1em;font-family:"Segoe UI",sans-serif}
+  .body{padding:16px}
+  .bubble{max-width:86%;padding:10px 13px;border-radius:12px;font-size:11.5px;line-height:1.68}
+  .user{margin-left:auto;background:linear-gradient(180deg,#2C5CA8,#244B8A);border:1px solid rgba(127,178,255,.35);color:#EAF2FF;border-bottom-right-radius:3px}
+  .agent{margin-top:12px;background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.14);color:#B9C9DE;border-top-left-radius:3px}
+  .agent .hi{color:#E6EDF7;font-weight:700}
+  .agent .q{margin-top:6px;color:#9FB2CB}
+  .agent .q b{color:#3DE0C8;font-weight:700}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .chip{font-size:9.5px;color:#AFC0D8;border:1px solid rgba(148,163,184,.16);background:rgba(148,163,184,.05);border-radius:6px;padding:4px 8px}
+  .chip b{color:#6EA8FF;font-weight:600}
+  .chatfoot{position:absolute;left:0;right:0;bottom:0;padding:11px 16px;border-top:1px solid rgba(148,163,184,.12);background:rgba(148,163,184,.035);font-size:10.5px;line-height:1.55;color:#8EA2BD}
+  .chatfoot b{color:#F5B65C;font-weight:700;letter-spacing:.04em;margin-right:6px}
+  .foot{position:absolute;left:64px;bottom:24px;font-size:11px;color:#5F7390}
+  .foot b{color:#93A4BE;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page" style="height:760px">
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span class="dot"></span>04 · IN A SESSION</div>
+      <div class="h2">一次会话，五次收敛</div>
+      <p class="sub">从一句模糊需求，到可验证的方案：先判断，再提问；信息足够就直接产出。</p>
+    </div>
+
+    <div class="main">
+      <div class="timeline">
+        <div class="titem">
+          <div class="tnode">1</div>
+          <div><div class="tt">接题 <span class="ttag">30 秒</span></div><div class="td">判断产品类型，用一句话复述问题。<b>不急着列功能。</b></div></div>
+        </div>
+        <div class="titem">
+          <div class="tnode">2</div>
+          <div><div class="tt">分诊 <span class="ttag">3 个问题</span></div><div class="td">只问最高杠杆的三个问题；答不上来的，标成<b>假设</b>继续往下走。</div></div>
+        </div>
+        <div class="titem">
+          <div class="tnode">3</div>
+          <div><div class="tt">产出 <span class="ttag">按模式裁剪</span></div><div class="td">Design Brief、概念模型、任务流、验证计划——<b>按任务需要给</b>，不一次倒完。</div></div>
+        </div>
+        <div class="titem">
+          <div class="tnode">4</div>
+          <div><div class="tt">标注 <span class="ttag">证据等级</span></div><div class="td">每个关键判断标 <b>[事实] / [推断] / [假设]</b>；假设必须带验证方式。</div></div>
+        </div>
+        <div class="titem">
+          <div class="tnode">5</div>
+          <div><div class="tt">收敛 <span class="ttag">下一步</span></div><div class="td">给出最小验证动作、时间点、<b>放弃条件</b>；而不是“建议持续优化”。</div></div>
+        </div>
+      </div>
+
+      <div class="chat">
+        <div class="bar"><i style="background:#FF6B6B"></i><i style="background:#F5B65C"></i><i style="background:#3DE0C8"></i><span class="t">PRODUCT-DESIGN · SESSION</span></div>
+        <div class="body">
+          <div class="bubble user">我想做一个面向自由职业者的记账工具。</div>
+          <div class="bubble agent">
+            <span class="hi">先给判断：</span>这更像「C 端低频工具」，主用诺曼 + 俞军，暂不做 Hook。<br><br>
+            问题陈述草案：自由职业者在月底对账时，想快速知道钱花在哪、哪些还没收，但收入不稳定、票据散落，目前只能用 Excel 手工补录。
+            <div class="q"><b>三个问题：</b><br>① 现在具体怎么记账？一周几次？<br>② 最痛的是「记」、「对账」，还是「催款」？<br>③ 愿意为「省时间」付费，还是为「少交税」付费？</div>
+          </div>
+          <div class="chips">
+            <span class="chip"><b>→</b> Design Brief</span>
+            <span class="chip"><b>→</b> 概念模型</span>
+            <span class="chip"><b>→</b> 任务流</span>
+            <span class="chip"><b>→</b> 验证计划</span>
+          </div>
+        </div>
+        <div class="chatfoot"><b>下一步</b>找 5 位自由职业者验证「首次整理 ≤ 15 分钟」；超过 30 分钟，就放弃自动生成。</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">先判断，后提问；先模型，后界面。 · <b>信息足够时，不为了流程而提问。</b></div>
+</div>
+</body>
+</html>

@@ -21,6 +21,8 @@ skills/product-design/
 - 新增 `references/*.md` 或 `assets/*.md` 后，**必须**在 `SKILL.md` 的「参考文件」表中登记，否则 `npm run validate` 会失败。
 - `SKILL.md` 控制在 400 行以内；细节放参考文件，按需加载。
 - 文件名用小写英文与连字符；中文标题写在文件内。
+- 改图示时先读 [`docs/DIAGRAMS.md`](docs/DIAGRAMS.md)，改 `docs/diagrams/*.html` 后运行 `scripts/render-diagrams.ps1`，并提交新的 PNG。
+- 发布与版本流程见 [`docs/PUBLISHING.md`](docs/PUBLISHING.md)。
 
 ## 内容标准
 

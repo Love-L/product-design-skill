@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .wrap{position:absolute;inset:0;padding:54px 64px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between}
+  .pills{display:flex;gap:8px;padding-bottom:8px}
+  .pill{font-size:10.5px;color:#9FB2CB;border:1px solid rgba(148,163,184,.18);background:rgba(148,163,184,.05);border-radius:999px;padding:5px 11px;letter-spacing:.04em}
+  .layer{display:flex;align-items:center;gap:10px;margin:22px 0 10px;font-size:10.5px;font-weight:700;letter-spacing:.18em;color:#6E8BB8}
+  .layer .idx{font-family:"Segoe UI",sans-serif;font-size:9.5px;color:#0B1220;background:#6E8BB8;border-radius:4px;padding:2px 5px;letter-spacing:0}
+  .hosts{display:flex;gap:26px}
+  .host{flex:1;height:82px;padding:13px 16px;border-radius:13px;background:rgba(17,29,50,.74);border:1px solid rgba(148,163,184,.14);position:relative}
+  .host:before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:2px;border-radius:2px;background:#6EA8FF;opacity:.7}
+  .ht{font-size:14.5px;font-weight:700}
+  .hp{font-family:"Cascadia Code",Consolas,monospace;font-size:10px;color:#6EA8FF;margin-top:4px;letter-spacing:.01em}
+  .hd{font-size:10.5px;color:#7F93AF;margin-top:4px}
+  .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#3DE0C8;margin-right:6px;vertical-align:1px}
+  .flow{position:relative;height:30px;display:flex;align-items:center;justify-content:center;margin:2px 0}
+  .flow:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px dashed rgba(148,163,184,.16)}
+  .flow span{position:relative;background:#0C1729;border:1px solid rgba(148,163,184,.14);border-radius:999px;padding:3px 12px;font-size:10px;color:#6E8BB8;letter-spacing:.12em}
+  .panel{display:flex;gap:20px;padding:20px;border-radius:16px;background:linear-gradient(180deg,rgba(23,36,60,.7),rgba(12,23,41,.7));border:1px solid rgba(148,163,184,.16)}
+  .router{flex:0 0 300px;position:relative;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(61,224,200,.10),rgba(10,20,36,.7));border:1px solid rgba(61,224,200,.28)}
+  .tag{display:inline-block;font-family:"Segoe UI",sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;color:#3DE0C8;border:1px solid rgba(61,224,200,.35);border-radius:4px;padding:2px 6px}
+  .rt{font-size:27px;font-weight:700;margin-top:12px;letter-spacing:-.01em}
+  .rd{font-size:11.5px;line-height:1.65;color:#9FB2CB;margin-top:8px}
+  .rmeta{position:absolute;left:18px;bottom:16px;font-size:10px;color:#6E8BB8;letter-spacing:.04em}
+  .res{flex:1;min-width:0}
+  .res-h{font-size:10px;letter-spacing:.14em;color:#6E8BB8;margin:2px 0 9px}
+  .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+  .rc{height:58px;padding:9px 11px;border-radius:9px;background:rgba(148,163,184,.05);border:1px solid rgba(148,163,184,.12)}
+  .rn{font-family:"Cascadia Code",Consolas,monospace;font-size:10.5px;color:#C8D6E8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rn b{color:#3DE0C8;font-weight:400}
+  .rd2{font-size:10px;color:#7F93AF;margin-top:4px;line-height:1.4}
+  .eng{display:flex;align-items:center;gap:12px}
+  .ec{flex:1;height:76px;padding:12px 14px;border-radius:12px;background:rgba(17,29,50,.74);border:1px solid rgba(148,163,184,.14)}
+  .et{font-size:13px;font-weight:700;color:#D7E3F3}
+  .ed{font-size:10.5px;color:#7F93AF;margin-top:5px;line-height:1.4}
+  .eb{font-size:9.5px;color:#F5B65C;margin-top:5px;letter-spacing:.05em}
+  .ea{color:#3B5070;font-size:15px;flex:0 0 14px;text-align:center}
+  .foot{position:absolute;left:64px;bottom:24px;font-size:11px;color:#5F7390}
+  .foot b{color:#93A4BE;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page" style="height:880px">
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="kicker"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:#3DE0C8;display:inline-block;margin-right:10px;vertical-align:1px"></span>03 · ARCHITECTURE</div>
+        <div class="h2">一份源文件，三种运行方式</div>
+        <p class="sub">仓库是单一事实源；安装是复制；加载是按需；校验在提交前。</p>
+      </div>
+      <div class="pills"><span class="pill">单一事实源</span><span class="pill">零依赖</span><span class="pill">可移植</span></div>
+    </div>
+
+    <div class="layer"><span class="idx">01</span> HOST · 宿主层</div>
+    <div class="hosts">
+      <div class="host"><div class="ht"><span class="dot"></span>DSH</div><div class="hp">~/.dsh/skills/product-design</div><div class="hd">目录 bundle，自动发现，无需重启</div></div>
+      <div class="host"><div class="ht"><span class="dot"></span>Claude Code</div><div class="hp">~/.claude/skills/product-design</div><div class="hd">用户级或项目级 skill</div></div>
+      <div class="host"><div class="ht"><span class="dot"></span>任意 Agent</div><div class="hp">SKILL.md + YAML frontmatter</div><div class="hd">只依赖 Markdown 与相对路径</div></div>
+    </div>
+
+    <div class="flow"><span>↓ 加载 SKILL.md</span></div>
+
+    <div class="layer"><span class="idx">02</span> CONTENT · 技能包</div>
+    <div class="panel">
+      <div class="router">
+        <div class="tag">ROUTER</div>
+        <div class="rt">SKILL.md</div>
+        <div class="rd">只放模式选择、阶段路由、质量闸门。<br>先判断任务类型，再决定加载哪份参考。</div>
+        <div class="rmeta">≈ 250 行 · 按需展开，不一次性灌入</div>
+      </div>
+      <div class="res">
+        <div class="res-h">按需加载 →</div>
+        <div class="res-grid">
+          <div class="rc"><div class="rn"><b>references/</b>01-five-lenses.md</div><div class="rd2">五镜：模型、边界、诊断问题</div></div>
+          <div class="rc"><div class="rn"><b>references/</b>02-workflow.md</div><div class="rd2">P0–P7 操作、脚本、完整案例</div></div>
+          <div class="rc"><div class="rn"><b>references/</b>03-heuristics.md</div><div class="rd2">决策树、25 条规则、反模式</div></div>
+          <div class="rc"><div class="rn"><b>references/</b>04-b-end-and-ai.md</div><div class="rd2">B 端、六脉神剑、度量</div></div>
+          <div class="rc"><div class="rn"><b>assets/</b>design-brief.md</div><div class="rd2">一页纸设计简报模板</div></div>
+          <div class="rc"><div class="rn"><b>assets/</b>review-checklist.md</div><div class="rd2">七维评审与结论规则</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow"><span>↑ 校验 / 发布</span></div>
+
+    <div class="layer"><span class="idx">03</span> ENGINEERING · 工程层</div>
+    <div class="eng">
+      <div class="ec"><div class="et">scripts/validate.mjs</div><div class="ed">frontmatter · 资源引用 · 本地链接 · 代码围栏</div><div class="eb">零依赖 · Node ≥ 18</div></div>
+      <div class="ea">→</div>
+      <div class="ec"><div class="et">GitHub Actions</div><div class="ed">push / PR 自动跑校验，坏链直接拦住</div><div class="eb">.github/workflows/validate.yml</div></div>
+      <div class="ea">→</div>
+      <div class="ec"><div class="et">install.ps1 / install.sh</div><div class="ed">复制到 DSH、Claude Code 或项目 skill 根目录</div><div class="eb">Windows · macOS · Linux</div></div>
+    </div>
+  </div>
+  <div class="foot">仓库是源，安装是副本。 · <b>改完仓库，重跑一次 install。</b></div>
+</div>
+</body>
+</html>

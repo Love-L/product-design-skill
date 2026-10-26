@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .wrap{position:absolute;inset:0;padding:56px 64px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px}
+  .legend{display:flex;gap:18px;font-size:11.5px;color:#8EA2BD;padding-bottom:6px}
+  .legend span{display:flex;align-items:center;gap:7px}
+  .legend i{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .row{display:flex;align-items:center;position:relative;z-index:2}
+  .step{position:relative;flex:0 0 250px;height:170px;padding:15px 16px 12px;border-radius:14px;
+        background:linear-gradient(180deg,color-mix(in srgb,var(--c) 7%,#101C32),#0C1729 70%);
+        border:1px solid rgba(148,163,184,.14)}
+  .step:before{content:"";position:absolute;left:16px;right:16px;top:0;height:2px;border-radius:0 0 2px 2px;background:var(--c);opacity:.75}
+  .ph{font-family:"Segoe UI",sans-serif;font-size:21px;font-weight:800;color:var(--c);letter-spacing:.02em}
+  .nm{font-size:17px;font-weight:700;margin-top:1px;letter-spacing:.02em}
+  .q{font-size:12.5px;line-height:1.55;color:#9FB2CB;margin-top:8px}
+  .out{position:absolute;left:16px;right:16px;bottom:11px;padding-top:8px;border-top:1px dashed rgba(148,163,184,.16);font-size:10.5px;color:#7F93AF;line-height:1.4}
+  .out b{color:#B9C9DE;font-weight:600}
+  .arw{flex:0 0 24px;text-align:center;color:#3B5070;font-size:17px;font-family:"Segoe UI",sans-serif}
+  .conn{position:absolute;left:0;top:0;z-index:1}
+  .band{display:flex;gap:24px;margin-top:54px}
+  .mode{flex:1;height:92px;padding:14px 18px;border-radius:14px;background:rgba(17,29,50,.72);border:1px solid rgba(148,163,184,.14)}
+  .mode .mt{font-size:13px;font-weight:700;color:#D7E3F3}
+  .mode .mp{font-family:"Segoe UI",sans-serif;font-size:12px;color:#6EA8FF;letter-spacing:.05em;margin-top:5px}
+  .mode .md{font-size:11px;color:#7F93AF;margin-top:5px;line-height:1.5}
+  .foot{position:absolute;left:64px;bottom:30px;font-size:11.5px;color:#5F7390}
+  .foot b{color:#93A4BE;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page" style="height:880px">
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="kicker"><span class="dot"></span>02 · WORKFLOW</div>
+        <div class="h2">从问题到交付，八个阶段</div>
+        <p class="sub">每一步都有必答问题、产出物和退出条件。可以裁剪，但不能跳步。</p>
+      </div>
+      <div class="legend">
+        <span><i style="background:#6EA8FF"></i>判断</span>
+        <span><i style="background:#3DE0C8"></i>设计</span>
+        <span><i style="background:#F5B65C"></i>验证</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="step" style="--c:#6EA8FF"><div class="ph">P0</div><div class="nm">立题</div><div class="q">谁在什么处境，<br>被什么卡住？</div><div class="out"><b>产出</b> 问题陈述 + 非目标</div></div>
+      <div class="arw">→</div>
+      <div class="step" style="--c:#6EA8FF"><div class="ph">P1</div><div class="nm">见人</div><div class="q">谁在用、谁在买、<br>谁在阻止？</div><div class="out"><b>产出</b> 角色-场景-任务表</div></div>
+      <div class="arw">→</div>
+      <div class="step" style="--c:#6EA8FF"><div class="ph">P2</div><div class="nm">算账</div><div class="q">新体验减旧体验，<br>再减替换成本。</div><div class="out"><b>产出</b> 价值假设 + 反证条件</div></div>
+      <div class="arw">→</div>
+      <div class="step" style="--c:#6EA8FF"><div class="ph">P3</div><div class="nm">建模</div><div class="q">用户以为这是什么？<br>下一步怎么走？</div><div class="out"><b>产出</b> 概念模型 + IA + 任务流</div></div>
+    </div>
+
+    <svg class="conn" width="1200" height="880" viewBox="0 0 1200 880" fill="none">
+      <path d="M1011 360 L1011 392 Q1011 400 1003 400 L197 400 Q189 400 189 408 L189 414" stroke="rgba(109,140,190,.55)" stroke-width="1.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+      <polygon points="189,422 184,412 194,412" fill="rgba(109,140,190,.8)"/>
+      <circle cx="1011" cy="360" r="2.5" fill="rgba(109,140,190,.8)"/>
+      <text x="600" y="391" text-anchor="middle" fill="#5F7390" font-size="10.5" font-family="Segoe UI, sans-serif" letter-spacing="2">CONTINUE</text>
+    </svg>
+
+    <div class="row" style="margin-top:36px">
+      <div class="step" style="--c:#3DE0C8"><div class="ph">P4</div><div class="nm">行为</div><div class="q">第一次顺不顺，<br>下一次来不来？</div><div class="out"><b>产出</b> 交互流程 + 反馈矩阵</div></div>
+      <div class="arw">→</div>
+      <div class="step" style="--c:#3DE0C8"><div class="ph">P5</div><div class="nm">感知</div><div class="q">第一眼看到什么，<br>会记住哪一瞬？</div><div class="out"><b>产出</b> 体验原则 + 界面意图</div></div>
+      <div class="arw">→</div>
+      <div class="step" style="--c:#F5B65C"><div class="ph">P6</div><div class="nm">验证</div><div class="q">什么证据会<br>推翻我们？</div><div class="out"><b>产出</b> 验证计划 + 指标树</div></div>
+      <div class="arw">→</div>
+      <div class="step" style="--c:#F5B65C"><div class="ph">P7</div><div class="nm">交付</div><div class="q">上线后先看哪三个数？<br>没达到先改哪层？</div><div class="out"><b>产出</b> PRD + 评审 + 复盘</div></div>
+    </div>
+
+    <div class="band">
+      <div class="mode"><div class="mt">完整模式</div><div class="mp">P0 → P7</div><div class="md">0→1 新产品、复杂系统、跨团队协作</div></div>
+      <div class="mode"><div class="mt">30 分钟快速模式</div><div class="mp">P0 · P2 · P3 模型 · 风险</div><div class="md">早期讨论、方向判断、一页纸方案</div></div>
+      <div class="mode"><div class="mt">B 端 / AI 专项</div><div class="mp">P0 · P1 · P3 · P4 · P6</div><div class="md">场景地图、六脉神剑、人在回环</div></div>
+    </div>
+  </div>
+  <div class="foot">裁剪的是流程，不是判断质量。 · <b>退出条件：能通过下一阶段的追问。</b></div>
+</div>
+</body>
+</html>
