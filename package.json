@@ -1,0 +1,14 @@
+{
+  "name": "product-design-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A product design operating system for AI agents, distilled from five classic product and design books.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
